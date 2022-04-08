@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppEnea</string>
+    <string name="nuova_immagine">Nuova Immagine</string>
+    <string name="nuova_cartella">Nuova Cartella</string>
+</resources>
