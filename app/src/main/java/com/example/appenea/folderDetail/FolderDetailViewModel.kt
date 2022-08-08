@@ -13,6 +13,10 @@ class FolderDetailViewModel(private val datasource: DataSourceFolder) : ViewMode
         return datasource.getFolderForId(id)
     }
 
+    fun removeFolder(folder: Folder){
+        datasource.removeFolder(folder)
+    }
+
 }
 
 class FolderDetailViewModelFactory(private val context: Context) : ViewModelProvider.Factory {

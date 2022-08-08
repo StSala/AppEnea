@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.appenea.data.DataSourceFolder
 import com.example.appenea.data.Folder
+import java.time.LocalDate
+import java.time.LocalDateTime
 import kotlin.random.Random
 
 class FoldersListViewModel(val dataSource: DataSourceFolder) : ViewModel() {
@@ -12,8 +14,14 @@ class FoldersListViewModel(val dataSource: DataSourceFolder) : ViewModel() {
     val foldersLiveData = dataSource.getFolderList()
 
     /* If the name and description are present, create new Flower and add it to the datasource */
-    fun insertFolder(folderName: String?, folderDescription: String?) {
-        if (folderName == null ) {
+    fun insertFolder(
+        folderName: String?,
+        folderDescription: String?,
+        folderAuthor: String?,
+        folderNote: String?
+        //folderDate: LocalDate
+    ) {
+        if (folderName == null || folderNote == null || folderAuthor == null) {
             return
         }
 
@@ -21,7 +29,10 @@ class FoldersListViewModel(val dataSource: DataSourceFolder) : ViewModel() {
             Folder(
                 Random.nextLong(),
                 folderName,
-                it
+                it,
+                folderAuthor,
+                folderNote
+                //folderDate
             )
         }
 

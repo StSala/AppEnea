@@ -22,6 +22,7 @@ class DataSourceFolder(resources: Resources) {
     }
 
     /* Rimuove Folder da liveData. */
+
     fun removeFolder(folder: Folder) {
         val currentList = foldersLiveData.value
         if (currentList != null) {
@@ -31,7 +32,7 @@ class DataSourceFolder(resources: Resources) {
         }
     }
 
-    /* Ritorna il folder dellìid dato. */
+    /* Ritorna il folder dell'id dato. */
     fun getFolderForId(id: Long): Folder? {
         foldersLiveData.value?.let { folders ->
             return folders.firstOrNull{ it.id == id}

@@ -3,13 +3,13 @@ package com.example.appenea.folderList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appenea.R
 import com.example.appenea.data.Folder
+import java.time.LocalDateTime
 
 class FoldersAdapter(private val onClick: (Folder) -> Unit) :
     ListAdapter<Folder, FoldersAdapter.FolderViewHolder>(FolderDiffCallback) {
@@ -17,8 +17,9 @@ class FoldersAdapter(private val onClick: (Folder) -> Unit) :
 
     class FolderViewHolder(itemView: View, val onClick: (Folder) -> Unit) :
         RecyclerView.ViewHolder(itemView) {
-        private val folderTextView: TextView = itemView.findViewById(R.id.folder_text)
-        //private val folderImageView: ImageView = itemView.findViewById(R.id.folder_image)
+        private val folderNameView: TextView = itemView.findViewById(R.id.folder_name)
+        private val folderDescriptionView: TextView = itemView.findViewById(R.id.folder_description)
+        private val folderAuthorView: TextView = itemView.findViewById(R.id.folder_author)
         private var currentFolder: Folder? = null
 
         init {
@@ -29,12 +30,13 @@ class FoldersAdapter(private val onClick: (Folder) -> Unit) :
             }
         }
 
-        /* Bind folder name and image. */
+        /* Bind folder name and the first image of the album. */
         fun bind(folder: Folder) {
             currentFolder = folder
 
-            folderTextView.text = folder.name
-
+            folderNameView.text = folder.name
+            folderDescriptionView.text = folder.description
+            folderAuthorView.text = folder.author
         }
     }
 

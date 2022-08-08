@@ -3,12 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.549074074074074" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/add_folder_layout.xml" value="0.2277475971583786" />
-        <entry key="app/src/main/res/layout/folder_detail_activity.xml" value="0.2277475971583786" />
+        <entry key="app/src/main/res/layout/add_folder_layout.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/add_note_layout.xml" value="0.46601111586147925" />
+        <entry key="app/src/main/res/layout/folder_detail_activity.xml" value="0.33" />
         <entry key="app/src/main/res/layout/folder_header_item.xml" value="0.2277475971583786" />
+        <entry key="app/src/main/res/layout/folder_image_pick_activity.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/folder_image_switcher.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/folder_image_switcher_activity.xml" value="0.45404018811457886" />
         <entry key="app/src/main/res/layout/item_cartelle.xml" value="0.3860624198375374" />
         <entry key="app/src/main/res/layout/item_folder.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/login_activity.xml" value="0.46601111586147925" />
+        <entry key="app/src/main/res/layout/take_photo_layout.xml" value="0.2277475971583786" />
+        <entry key="app/src/main/res/xml/file_paths.xml" value="0.2277475971583786" />
       </map>
     </option>
   </component>

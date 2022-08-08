@@ -1,40 +1,89 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/folder_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="folder_name"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/folder_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".3" />
 
-    <ImageView
-        android:id="@+id/folder_image"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        android:contentDescription="folder_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/folder_name"
+            android:layout_width="160dp"
+            android:layout_height="58dp"
+            android:fontFamily="sans-serif"
+            android:text="Title"
+            android:textAlignment="center"
+            android:textColor="#212121"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/folder_image"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="116dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toStartOf="@+id/folder_image"
-        app:layout_constraintStart_toEndOf="@+id/folder_name"
-        tools:layout_editor_absoluteY="16dp" />
+        <TextView
+            android:id="@+id/folder_author"
+            android:layout_width="160dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="sans-serif"
+            android:text="Author"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#212121"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/folder_image"
+            app:layout_constraintTop_toBottomOf="@+id/folder_name"
+            app:layout_constraintTop_toTopOf="@+id/folder_name" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/folder_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="description"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/folder_image"
+            app:layout_constraintTop_toBottomOf="@+id/folder_image"
+            app:layout_constraintVertical_bias="0.0" />
 
+        <EditText
+            android:id="@+id/folderDate_creation"
+            android:layout_width="116dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="48dp"
+            android:fontFamily="sans-serif"
+            android:text="20/06/22"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:translationY="-33dp"
+            app:layout_constraintBottom_toTopOf="@+id/folder_description"
+            app:layout_constraintStart_toStartOf="@+id/folder_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

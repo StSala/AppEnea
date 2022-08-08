@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appenea.R
+import kotlinx.android.synthetic.main.item_folder.view.*
 
 /* Una lista che fa vedere sempre quanti elementi contiene. */
 
@@ -15,6 +16,7 @@ class HeaderAdapter: RecyclerView.Adapter<HeaderAdapter.HeaderViewHolder>() {
     /* ViewHolder for displaying header. */
     class HeaderViewHolder(view: View) : RecyclerView.ViewHolder(view){
         private val folderNumberTextView: TextView = itemView.findViewById(R.id.folder_number_text)
+
 
         fun bind(folderCount: Int) {
             folderNumberTextView.text = folderCount.toString()

@@ -13,7 +13,8 @@
         android:paddingBottom="16dp"
         android:text="Add Folder"
         android:textAlignment="center"
-        android:textAppearance="?attr/textAppearanceHeadline4" />
+        android:textAppearance="?attr/textAppearanceHeadline4"
+        android:visibility="gone" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -27,7 +28,6 @@
             android:id="@+id/add_folder_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="Folder Description"
+        android:hint="Folder Description ( Optional ) "
         android:paddingTop="16dp"
         android:paddingBottom="16dp">
 
@@ -44,22 +44,70 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/create_button"
-        style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Create" />
 
-    <Button
-        android:id="@+id/cancel_button"
-        style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="240dp"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Cancel" />
+        android:hint="Folder Author"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_folder_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Folder Note"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_folder_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/folderDate_creation"
+        android:layout_width="88dp"
+        android:layout_height="36dp"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/create_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Create" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/undo_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Undo" />
+
+    </FrameLayout>
 </LinearLayout>

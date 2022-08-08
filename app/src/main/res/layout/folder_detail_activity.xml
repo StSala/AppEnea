@@ -10,24 +10,38 @@
     <TextView
         android:id="@+id/folder_detail_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:text="folder title"
+        android:layout_height="70dp"
+        android:background="@color/teal_700"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp"
+        android:text="FOLDER TITLE"
         android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceHeadline3"
-        android:background="@color/teal_700"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/folder_detail_note"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif"
+        android:text="note"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout_imageFolder"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout_imageFolder"
+        app:layout_constraintVertical_bias="0.0" />
+
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:background="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-
-    </FrameLayout>
 
     <Button
         android:id="@+id/send_button"
@@ -37,21 +51,58 @@
         android:layout_gravity="left"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Send"
+        android:text="SEND FOLDER"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/photo_button"
+        <Button
+            android:id="@+id/add_note_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="ADD NOTE"
+            android:translationX="145dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Button
+        android:id="@+id/delete_button"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Photo"
+        android:text="DELETE FOLDER"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout_imageFolder"
+        android:layout_width="412dp"
+        android:layout_height="102dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/folder_detail_name">
+
+        <ImageView
+            android:id="@+id/imageFolder_view"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:translationY="10dp"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/imageFolder_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Folder"
+            android:translationX="170dp"
+            android:translationY="30dp" />
+
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

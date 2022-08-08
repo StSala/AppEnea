@@ -4,9 +4,9 @@
     <uses-feature android:name="android.hardware.camera.any" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="28" />
-
+        android:maxSdkVersion="29" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppEnea" >
-        <activity android:name=".folderList.FoldersListActivity"
+        <activity android:name=".login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,10 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".folderList.FoldersListActivity" />
         <activity android:name=".addFolder.AddFolderActivity" />
         <activity android:name=".folderDetail.FolderDetailActivity" />
+        <activity android:name=".folderImageDetail.FolderImageActivity" />
+    </application>
 
-</application>
 
 </manifest>
 

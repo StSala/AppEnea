@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/purple_500">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Login To Enea"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadline4" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Username"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_folder_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_folder_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/login_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Login"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/skipLogin_button"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Skip"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
